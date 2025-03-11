@@ -2,6 +2,7 @@
 @import "colors.css";
 @import "fonts.css";
 @import "container.css";
+@import "shiki.css";
 
 :root {
     --font-family: 'Atkinson Hyperlegible Next', sans-serif;
@@ -28,26 +29,62 @@ main {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family);
+    margin-block-start: 1em;
+    margin-block-end: 0.5em;
+    padding: 0;
+}
+
+h1 {
+    margin-block-start: 0;
 }
 
 article {
+    --border-width: 2px;
     background-color: var(--uchu-yang);
-    padding: 1em;
+    padding-block: 1em;
+    padding-inline: 3em;
     margin: 1em auto;
     position: relative;
-    border: 2px solid var(--uchu-yin-9);
+    border: var(--border-width) solid var(--uchu-yin-9);
 
-    &:before {
+    &:after {
+        --extra-width: calc(var(--border-width) * 2);
         content: '';
         position: absolute;
         background: var(--uchu-blue-5);
         background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23000000' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
         background-blend-mode: overlay;
-        height: calc(100% + 4px);
-        width: calc(100% + 4px);
+        height: calc(100% + var(--extra-width));
+        width: calc(100% + var(--extra-width));
         top: 5px;
         left: 5px;
         z-index: -1;
         border: 2px solid var(--uchu-yin-9);
+    }
+}
+
+@media (max-width: 576px) {
+    article {
+        padding-inline: 1em;
+    }
+}
+
+pre {
+    padding: 1em;
+    border: 1px solid var(--uchu-yellow-5);
+    overflow: scroll;
+}
+
+ul {
+    padding-inline-start: 1em;
+    margin-block: 1em;
+
+    a {
+        color: var(--uchu-blue-7);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
