@@ -1,0 +1,7 @@
+{% assign sortedContent = collections.docs | sort: "data.order" %}
+{% for contentFile in sortedContent %}
+    <article>
+        <h2 id="{{ contentFile.data.title |  slug }}">{{ contentFile.data.title }}</h2>
+        {{ contentFile.content }}
+    </article>
+{% endfor %}

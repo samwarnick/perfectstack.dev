@@ -1,6 +1,7 @@
-<article>
-
-# _The Perfect Stack_
+---
+title: The Perfect Stack
+order: 1
+---
 
 Not a framework, just the perfect collection of technologies. Come for the buzzwords, stay for the delightful experience.
 
@@ -14,24 +15,7 @@ Not a framework, just the perfect collection of technologies. Come for the buzzw
 
 Use it. Don't use it. Whatever.
 
-</article>
 
-<article>
 
-## Getting Started
-```sh
-bun create samwarnick/perfect-stack perfect-app
-cd perfect-app
-bun dev
-```
 
-</article>
-
-<article>
-
-## //TODO:
-
-Write more stuff.
-
-</article>
 

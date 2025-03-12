@@ -5,6 +5,7 @@ import {
 } from "@shikijs/transformers";
 
 export default async function(eleventyConfig) {
+	eleventyConfig.addTemplateFormats("md");
 	const options = {
 		html: true,
 		breaks: true,
