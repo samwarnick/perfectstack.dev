@@ -1,7 +1,20 @@
 {% assign sortedContent = collections.docs | sort: "data.order" %}
+{% comment %}<nav>{% endcomment %}
+    {% comment %}<ul>{% endcomment %}
+        {% comment %}{% for contentFile in sortedContent %}{% endcomment %}
+            {% comment %}<li><a href="#{{ contentFile.data.title |  slug }}">{{ contentFile.data.title }}</a></li>{% endcomment %}
+        {% comment %}{% endfor %}{% endcomment %}
+    {% comment %}</ul>{% endcomment %}
+{% comment %}</nav>{% endcomment %}
 {% for contentFile in sortedContent %}
     <article>
-        <h2 id="{{ contentFile.data.title |  slug }}">{{ contentFile.data.title }}</h2>
+        {% assign title = contentFile.data.title %}
+        {% assign id = title | slug %}
+        {% if id == "the-perfect-stack" %}
+            <h1 id="{{ id }}"><em>{{ title }}</em></h1>
+        {% else %}
+            <h2 id="{{ id }}">{{ title }}</h2>
+        {% endif %}
         {{ contentFile.content }}
     </article>
 {% endfor %}

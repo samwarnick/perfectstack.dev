@@ -117,11 +117,12 @@ pre {
     padding: 1em;
     border: 1px solid var(--uchu-yellow-5);
     overflow: scroll;
+    margin-block-end: 1em;
 }
 
-ul {
+ul, ol {
     padding-inline-start: 1em;
-    margin-block: 1em;
+    margin-block-end: 1em;
 
     a {
         color: var(--uchu-blue-7);
@@ -131,6 +132,15 @@ ul {
             text-decoration: underline;
         }
     }
+}
+
+p {
+    margin-block-end: 1em;
+}
+
+hr {
+    margin-block-end: 1em;
+    border: 2px solid var(--uchu-yin-2);
 }
 
 header {

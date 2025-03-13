@@ -1,6 +1,8 @@
 ---
 title: Tips & Tricks
-order: 3
+order: 4
 ---
 
-Write more stuff.
+### WebStorm
+
+- Mark `/src` as a Resource Root.
