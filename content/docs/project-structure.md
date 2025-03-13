@@ -11,6 +11,7 @@ perfect-app/
 │   ├── assets/
 │   │   ├── alpinejs.min.js
 │   │   ├── htmx.min.js
+│   │   ├── pico.min.css
 │   │   └── styles.css
 │   ├── db/
 │   │   ├── migrations/
@@ -29,9 +30,10 @@ perfect-app/
 │   │   ├── layouts/
 │   │   │   ├── BaseLayout.ts
 │   │   │   └── [your other layouts]
-│   │   └── pages/
-│   │       ├── IndexPage.ts
-│   │       └── [your other pages]
+│   │   ├── pages/
+│   │   │   ├── IndexPage.ts
+│   │   │   └── [your other pages]
+│   │   └── context.ts
 │   ├── index.ts
 │   └── models.ts
 ├── drizzle.config.ts
