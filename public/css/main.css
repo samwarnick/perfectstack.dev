@@ -6,6 +6,7 @@
 
 :root {
     --font-family: 'Atkinson Hyperlegible Next', sans-serif;
+    --mono-font-family: 'Atkinson Hyperlegible Mono', monospace;
     --border-width: 3px;
 }
 
@@ -113,6 +114,10 @@ article, .card {
     }
 }
 
+pre, code {
+    font-family: var(--mono-font-family);
+}
+
 pre {
     padding: 1em;
     border: 1px solid var(--uchu-yellow-5);
@@ -136,6 +141,24 @@ ul, ol {
 
 p {
     margin-block-end: 1em;
+
+
+}
+
+code {
+    position: relative;
+}
+
+:not(pre) > code::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -3px;
+    left: -3px;
+    bottom: 0;
+    background-color: var(--uchu-gray-1);
+    z-index: -1;
+    border-radius: 2px;
 }
 
 hr {
