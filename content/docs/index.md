@@ -63,3 +63,5 @@ Also optional. When I start a project, I usually don't want to immediately think
 ---
 
 This works for me. Will it work for you? IDK. Maybe. 
+
+![](/media/test.jpeg)
